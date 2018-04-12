@@ -1,0 +1,7 @@
+{
+  "name": "firstdotvvmapp",
+  "private": true,
+  "dependencies": {
+		"bootstrap" : "3.3.7"
+  }
+}
