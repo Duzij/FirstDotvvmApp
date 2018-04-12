@@ -2,5 +2,15 @@
 @masterPage Views/MasterPage.dotmaster
 <dot:Content ContentPlaceHolderID="MainContent">
 
-	<h1>{{value: Title}}</h1>
+    <label>Item:</label>
+    <dot:TextBox Text="{value: ToDoItem.Text}" />
+    <dot:Button Text="Add Item" IsSubmitButton="true" Click="{command: AddTodoItem(ToDoItem)}"></dot:Button>
+
+    <hr />
+    <dot:Repeater DataSource="{value: ToDoItems}">
+        <span>{{value: Text}}</span>
+        <span Visible="{value: IsDone}">Done!</span>
+        <p><dot:Button Validation.Enabled="false" Visible="{value: !IsDone}" Text="Mark as done" Click="{command: _parent.MarkAsDone(_this)}"></dot:Button></p>
+        <hr />
+    </dot:Repeater>
 </dot:Content>

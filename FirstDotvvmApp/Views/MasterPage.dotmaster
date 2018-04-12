@@ -5,11 +5,8 @@
 <head>
     <meta charset="utf-8" />
     <title>FirstDotvvmApp</title>
-    <dot:RequiredResource Name="bootstrap" />
 </head>
 <body>
-
- 	
 
 	<dot:ContentPlaceHolder ID="MainContent" />
 
