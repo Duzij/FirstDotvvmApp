@@ -2,8 +2,8 @@
 @masterPage Views/MasterPage.dotmaster
 <dot:Content ContentPlaceHolderID="MainContent">
 
-    <label>Item:</label>
-    <dot:TextBox Text="{value: ToDoItem.Text}" />
+    <label for="todotext">Item:</label>
+    <dot:TextBox  ID="todotext"Text="{value: ToDoItem.Text}" />
     <dot:Button Text="Add Item" IsSubmitButton="true" Click="{command: AddTodoItem(ToDoItem)}"></dot:Button>
 
     <hr />
